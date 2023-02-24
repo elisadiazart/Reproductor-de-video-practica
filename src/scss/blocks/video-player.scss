@@ -1,0 +1,125 @@
+.video{
+    width: 100vw;
+    display: block;
+
+    &-options-bar{
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+        align-items: center;
+
+        &__times-controller{
+            display: flex;
+            gap: 2rem;
+        }
+        
+
+        &__volume-and-speed{
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    &-bar-player{
+        width: 100vw;
+        height: 10px;
+        background-color: rgb(197, 196, 196);
+        position: relative;
+    
+        &::after{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: rgb(250, 26, 26);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -5px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.361);
+            left: calc(var(--player-position) - 20px);
+        }
+    
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 10px;
+            background-color: rgb(148, 29, 29);
+            width: calc(var(--player-position) - 10px);
+        }
+    }
+  }
+
+.speed--pop-up{
+    display: none;
+
+    &__li{
+        cursor: pointer;
+
+        &:hover{
+            font-weight: 800;
+        }
+    }
+
+    &--active{
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style: none;
+        font-family: sans-serif;
+        font-size: .8rem;
+        flex-shrink: 0;
+        bottom: -9rem;
+        left: -1rem;
+        gap: .7rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+        background-color: white;
+        padding: 1rem;
+    }
+}
+
+.playback-speed{
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    position: relative;
+
+
+    &__ul{
+        font-family: sans-serif;
+        font-size: .8rem;
+        width: 40px;
+    }
+
+    &__li{
+        cursor: pointer;
+    }
+}
+
+.time-skip{
+    display: flex;
+    gap: 1rem;
+}
+
+.play-pause{
+    position: relative;
+    width: 12px;
+    transition: transform .5s;
+    &:hover{
+        transform: scale(130%) ;
+        transition: transform .5s;
+    }
+}
+
+.fa-angles-right,
+.fa-angles-left{
+    transition: transform .5s;
+    &:hover{
+        transform: scale(130%) ;
+        transition: transform .5s;
+    }
+}

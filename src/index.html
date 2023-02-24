@@ -4,12 +4,38 @@
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
+    <script src="https://kit.fontawesome.com/1b394824e9.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
   <body>
-    <img src="assets/images/anubis.jpg" width="500px" alt="anubis" />
-    <script type="module" src="./index.js"></script>
+    <video controls id="video" autoplay muted class="video" src="assets/video/Joji - Like You Do-(1080p).mp4"></video>
+    <div id="bar" class="video-bar-player"></div>
+    <div class="video-options-bar">
+      <div class="video-options-bar__times-controller">
+        <!--<i class="fa-solid fa-play"></i>-->
+        <i id="pause" class="play-pause fa-solid fa-pause"></i>
+        <div class="time-skip">
+          <i id="minus-ten" class="fa-solid fa-angles-left"></i>
+          <i id="plus-ten" class="fa-solid fa-angles-right"></i>
+        </div>
+      </div>
+      <div class="video-options-bar__volume-and-speed">
+      <i class="fa-solid fa-volume-high"></i>
+      <nav class="playback-speed">
+        <ul id="speed" class="playback-speed__ul">
+          <li class="playback-speed__li">Normal</li>
+        </ul>
+        <div id="pop-up" class="speed--pop-up">
+          <li class="speed--pop-up__li" data-time="0.5">0.5</li>
+          <li class="speed--pop-up__li" data-time="1">Normal</li>
+          <li class="speed--pop-up__li" data-time="1.5">1.5</li>
+          <li class="speed--pop-up__li" data-time="2">2</li>
+        </div>
+      </nav>
+    </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
