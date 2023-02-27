@@ -10,7 +10,7 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <video controls id="video" autoplay muted class="video" src="assets/video/Joji - Like You Do-(1080p).mp4"></video>
+    <video autoplay muted id="video" class="video" src="assets/video/Joji - Like You Do-(1080p).mp4"></video>
     <div id="bar" class="video-bar-player"></div>
     <div class="video-options-bar">
       <div class="video-options-bar__times-controller">
@@ -20,18 +20,24 @@
           <i id="minus-ten" class="fa-solid fa-angles-left"></i>
           <i id="plus-ten" class="fa-solid fa-angles-right"></i>
         </div>
+        <div id="currentTime" class="video-time">
+          00:00
+        </div>
       </div>
       <div class="video-options-bar__volume-and-speed">
-      <i class="fa-solid fa-volume-high"></i>
+        <div class="volume">
+          <input id="volumeRange" type="range" min="0" max="100" value="0">
+          <i id="volumeIcon" class="fa-solid fa-volume-xmark"></i>
+        </div>
       <nav class="playback-speed">
         <ul id="speed" class="playback-speed__ul">
           <li class="playback-speed__li">Normal</li>
         </ul>
         <div id="pop-up" class="speed--pop-up">
-          <li class="speed--pop-up__li" data-time="0.5">0.5</li>
+          <li class="speed--pop-up__li" data-time="0.5">x0.5</li>
           <li class="speed--pop-up__li" data-time="1">Normal</li>
-          <li class="speed--pop-up__li" data-time="1.5">1.5</li>
-          <li class="speed--pop-up__li" data-time="2">2</li>
+          <li class="speed--pop-up__li" data-time="1.5">x1.5</li>
+          <li class="speed--pop-up__li" data-time="2">x2</li>
         </div>
       </nav>
     </div>

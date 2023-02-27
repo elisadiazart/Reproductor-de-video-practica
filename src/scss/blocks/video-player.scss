@@ -15,6 +15,7 @@
         &__times-controller{
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
         
 
@@ -73,7 +74,7 @@
         font-family: sans-serif;
         font-size: .8rem;
         flex-shrink: 0;
-        bottom: -9rem;
+        bottom: 2rem;
         left: -1rem;
         gap: .7rem;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
@@ -122,4 +123,15 @@
         transform: scale(130%) ;
         transition: transform .5s;
     }
+}
+
+.volume{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.video-time{
+    font-family: sans-serif;
+    font-size: .8rem;
 }
