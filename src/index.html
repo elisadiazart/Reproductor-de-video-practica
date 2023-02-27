@@ -10,7 +10,12 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <video autoplay muted id="video" class="video" src="assets/video/Joji - Like You Do-(1080p).mp4"></video>
+    <div class="video__container">
+      <video autoplay muted id="video" class="video" src="assets/video/Joji - Like You Do-(1080p).mp4"></video>
+      <div id="paused" class="video__paused"><i class="fa-solid fa-play"></i></div>
+      <div id="plusTen" class="video__plus-ten-seconds"></div>
+      <div id="minusTen" class="video__minus-ten-seconds"></div>
+    </div>
     <div id="bar" class="video-bar-player"></div>
     <div class="video-options-bar">
       <div class="video-options-bar__times-controller">
@@ -20,13 +25,15 @@
           <i id="minus-ten" class="fa-solid fa-angles-left"></i>
           <i id="plus-ten" class="fa-solid fa-angles-right"></i>
         </div>
-        <div id="currentTime" class="video-time">
-          00:00
+        <div class="time">
+          <div id="currentTime" class="video-time">
+            00:00</div>
+          <div id="timeVideo" class="video-time">/ 00:00</div>
         </div>
       </div>
       <div class="video-options-bar__volume-and-speed">
         <div class="volume">
-          <input id="volumeRange" type="range" min="0" max="100" value="0">
+          <input id="volumeRange" class="volume-range" type="range" min="0" max="100" value="0">
           <i id="volumeIcon" class="fa-solid fa-volume-xmark"></i>
         </div>
       <nav class="playback-speed">
